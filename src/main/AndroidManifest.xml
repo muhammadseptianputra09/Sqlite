@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.sqliteb">
+    package="com.example.act_sql">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name="com.example.sqlite.app.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Sqlite">
-        <activity android:name="com.example.sqlite.teman_baru"></activity>
+        android:theme="@style/Theme.Sqlite"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.example.sqlite.EditTeman"></activity>
+        <activity android:name="com.example.sqlite.TambahTeman" />
         <activity android:name="com.example.sqlite.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
